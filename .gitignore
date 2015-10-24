@@ -44,3 +44,157 @@
 		
 	</body>
 </html>
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+#wrap {
+  margin: 50px 100px;
+  display: inline-block;
+  position: relative;
+  height: auto;
+  float: right;
+  padding: 0;
+  position: relative;
+}
+
+input[type="text"] {
+  height: auto;
+  font-size: auto;
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: auto;
+  border: none;
+  outline: none;
+  color: #555;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+  border: 1px solid #BBB;
+}
+
+input[type="text"]:focus {
+  width: 200px;
+  z-index: 1;
+  border: 1px solid #BBB;
+  cursor: text;
+  box-shadow: 10px 5px 5px #888888;
+}
+input[type="submit"] {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background: url(search.png) center center no-repeat;
+  text-indent: -750px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.nav ul {
+   *zoom:1;
+    list-style:none;
+    margin-left:40%;
+    padding:0;
+	width: auto;
+	height : auto;
+}
+.nav ul:before,.nav ul:after {
+    content:"";
+    display:table;
+}
+.nav ul:after {
+    clear:both;
+}
+.nav ul > li {
+    float:left;
+    position:relative;
+}
+.nav a {
+    display:block;
+    padding:10px 20px;
+    line-height:1.2em;
+    color:black;
+    border:1px solid #595959;
+}
+.nav a:hover {
+    text-decoration:none;
+    background:#D63385;
+}
+.nav li ul {
+    background:#FFEEEE;
+}
+.nav li ul li {
+    width:200px;
+}
+.nav li ul a {
+    border:none;
+	text-align : center;
+}
+.nav li ul a:hover {
+    background:rgba(0,0,0,0.2);
+	text-align : center;
+}
+
+.nav li ul {
+    position:absolute;
+    left:0;
+    top:auto;
+    z-index:1;
+}
+.nav li ul li {
+    overflow:hidden;
+    height:0;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+}
+.nav ul > li:hover ul li {
+    height:auto;
+}
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 760px){
+	
+	ul {
+		position: static;
+		display: none;
+	}
+	
+	li {
+		margin-bottom: 1px;
+	}
+	
+	ul li, li a {
+		width: 100%;
+	}
+	
+	.nav {
+		display:block;
+	}
+}
